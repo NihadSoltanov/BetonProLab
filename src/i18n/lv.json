@@ -1,0 +1,94 @@
+{
+  "ORDER_HISTORY": "Pasūtījumu vēsture",
+  "ORDER_TRACKING":"Pasūtījuma izsekošana",
+  "plants":"Augi",
+  "slump":"Pagrimums",
+  "site": "Vietnē",
+  "graph":"Grafiks",
+  "order":"pasūtījumus",
+  "strength":"Spēks",
+  "freeze":"Iesaldēt",
+  "comments":"komentāri",
+  "update":"Atjaunināt",
+  "loading": "LoadinG",
+  "invoice": "Rēķins",
+  "time":"Laiks",
+  "date":"Datums",
+  "amount":"Summa",
+  "ongoing_orders":"Pastāvīgi pasūtījumi",
+  "license_plate":"Licence",
+  "product":"Produkts",
+  "plant":"Augu",
+  "interval":"Intervāls",
+  "app": {
+    "name": "Lab App",
+    "description": ""
+  },
+  "sign_in": {
+    "welcome_back":"Laipni lūdzam atpakaļ",
+    "please_login": "Lūdzu, piesakieties",
+    "sign_out": "Iziet",
+    "email": "e-pasts",
+    "password": "parole",
+    "login":"Pieslēgties",
+    "select_region": "Atlasiet reģionu",
+    "select_language":"Atlasiet valodu",
+    "forgot_password":"Aizmirsi paroli?",
+    "dialog_error_title": "Nevarēja pierakstīties",
+    "forgot_password_dialog": {
+      "title": "Paroles atiestatīšana",
+      "description": "Lūdzu, ievadiet savu e-pasta adresi, lai atiestatītu paroli",
+      "ok_button": "Atiestatīt",
+      "cancel_button": "Atcelt"
+    },
+    "reset_password_confirmation_dialog": {
+      "title": "Paroles atiestatīšanas e-pasts ir nosūtīts",
+      "description": "Lūdzu, pārbaudiet iesūtnē paroles atiestatīšanas e-pasta ziņojumu un izpildiet e-pastā sniegtos norādījumus"
+    }
+  },
+  "strength_form":{
+    "strength_test":"Spēka pārbaude",
+    "date_of_sampling":"Paraugu ņemšanas datums",
+    "sampling_by":"Izlases veic",
+    "tested_by":"Pārbaudījis",
+    "test_time":"Pārbaudes laiks",
+    "strength":"Spēks",
+    "density":"Blīvums",
+    "1_day": "1 diena",
+    "7_day": "7 diena",
+    "14_day": "14 diena",
+    "28_day": "28 diena"
+  },
+  "slump_form":{
+    "slump_test": "Krituma pārbaude",
+    "time":"Laiks",
+    "slump":"Slankumas, mm:",
+    "temperature":"Temperatūra, C",
+    "air":"Gaiss, %",
+    "tested_by":"Pārbaudījis"
+  },
+  "freeze_form":{
+    "freeze_test":"Saldēšanas tests",
+    "test_time":"Pārbaudes laiks",
+    "number_of_cycles":"Ciklu skaits",
+    "tested_by":"Pārbaudījis",
+    "mass_before":"Mise Pirms",
+    "mass_after":"Mise Pēc",
+    "percentage":"%"
+  },
+  "filter_form":{
+    "filter":"Filtrs",
+    "all":"Visi",
+    "period":"Periods",
+    "this_month":"Šis mēnesis",
+    "last_month":"Pagājušajā mēnesī",
+    "waybill_number":"Pavadzīmes numurs",
+    "waybill_placeholder":"Šeit ievadiet pavadzīmes numuru",
+    "client": "Klients",
+    "client_placeholder":"Ievadiet klientu šeit",
+    "clear":"Skaidrs"
+  },
+  "orders":{
+    "empty":"Pasūtījums nav atrasts!"
+  }
+}

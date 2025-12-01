@@ -1,0 +1,94 @@
+{
+  "ORDER_HISTORY": "История заказов",
+  "ORDER_TRACKING":"Отслеживание заказа",
+  "plants":"завод",
+  "slump":"спад",
+  "site": "место",
+  "graph":"график",
+  "order":"заказ",
+  "strength":"прочность",
+  "freeze":"заморозить",
+  "comments":"Комментарии",
+  "update":"Обновлять",
+  "loading": "загрузка",
+  "invoice": "счет",
+  "time":"время",
+  "date":"дата",
+  "amount":"количество", 
+  "ongoing_orders":"текущие заказы",
+  "license_plate":"Номерной знак",
+  "product":"Продукт",
+  "plant":"завод",
+  "interval":"Интервал",
+  "app": {
+    "name": "Lab App",
+    "description": ""
+  },
+  "sign_in": {
+    "welcome_back":"Добро пожаловать",
+    "please_login": "Пожалуйста, войдите",
+    "sign_out": "Выйти из системы",
+    "email": "е-мейл",
+    "password": "пароль",
+    "select_region": "Выберите регион",
+    "select_language":"Выберите язык",
+    "login":"Авторизоваться",
+    "forgot_password":"Забыли пароль?",
+    "dialog_error_title": "Не удалось войти?",
+    "forgot_password_dialog": {
+      "title": "Восстановление пароля",
+      "description": "Пожалуйста, введите свой адрес электронной почты, чтобы сбросить пароль.",
+      "ok_button": "Сброс пароля",
+      "cancel_button": "Отмена"
+    },
+    "reset_password_confirmation_dialog": {
+      "title": "Письмо для сброса пароля отправлено",
+      "description": "Проверьте свой почтовый ящик на наличие письма для сброса пароля и следуйте инструкциям в письме."
+    }
+  },
+  "strength_form":{
+    "strength_test":"Испытание на прочность",
+    "date_of_sampling":"Дата отбора проб",
+    "sampling_by":"Выборка по",
+    "tested_by":"Протестировано",
+    "test_time":"Время тестирования",
+    "strength":"прочность",
+    "density":"Плотность",
+    "1_day": "1 день",
+    "7_day": "7 день",
+    "14_day": "14 день",
+    "28_day": "28 день"
+  },
+  "slump_form":{
+    "slump_test": "Испытание на осадку",
+    "time":"время",
+    "slump":"спад, mm",
+    "temperature":"Температура, C",
+    "air":"Воздух, %",
+    "tested_by":"Протестировано"
+  },
+  "freeze_form":{
+    "freeze_test":"Тест на заморозку",
+    "test_time":"время испытания",
+    "number_of_cycles":"количество циклов",
+    "tested_by":"Протестировано",
+    "mass_before":"Месса перед",
+    "mass_after":"Месса после",
+    "percentage":"%"
+  },
+  "filter_form":{
+    "filter":"Фильтр",
+    "all":"все",
+    "period":"Период",
+    "this_month":"Этот месяц",
+    "last_month":"Прошлый месяц",
+    "waybill_number":"Номер накладной",
+    "waybill_placeholder":"Введите номер накладной здесь",
+    "client": "Клиент",
+    "client_placeholder":"Введите клиент здесь",
+    "clear":"Прозрачный"
+  },
+  "orders":{
+    "empty":"Заказ не найден!"
+  }
+}

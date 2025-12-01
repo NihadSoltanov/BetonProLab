@@ -1,0 +1,30 @@
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+// .husky folder at root > commit-msg file contents:-
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no -- commitlint --edit ${1}
+
+
+
+// .husky folder at root > pre-commit file contents:-
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+
+npm run lint &&
+git add . &&
+npx lint-staged
+
+
+
+// .husky folder at root > prepare-commit-msg file contents:-
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+exec < /dev/tty && npx cz --hook || true

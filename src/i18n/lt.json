@@ -1,0 +1,94 @@
+{
+  "ORDER_HISTORY": "Užsakymų istorija",
+  "ORDER_TRACKING":"Vykdomi užsakymai",
+  "plants":"Gamykloje",
+  "slump":"Slankumas",
+  "site":"Objekte",
+  "graph":"Grafikas",
+  "order": "užsakymų",
+  "strength":"Stiprumas",
+  "freeze":"Šalčio testas",
+  "comments":"Komentarai",
+  "update":"Išsaugoti",
+  "loading": "Krauname...",
+  "invoice":"Važtaraštis",
+  "time":"Laikas",
+  "date":"Data",
+  "amount":"Kiekis",
+  "ongoing_orders":"užsakymų",
+  "license_plate":"Auto Nr",
+  "product":"Betonas",
+  "plant":"Gamykla",
+  "interval":"Intervalas",
+  "app": {
+    "name": "Lab App",
+    "description": ""
+  },
+  "sign_in": {
+    "welcome_back":"Sveiki sugrįžę",
+    "please_login": "Prašome prisijungti",
+    "sign_out": "Atsijungti",
+    "email": "Prisijungimas",
+    "password": "Slaptažodis",
+    "login":"Prisijungti",
+    "select_region": "Pasirinkite regioną",
+    "select_language":"Pasirinkite kalbą",
+    "forgot_password":"Pamiršote slaptažodį?",
+    "dialog_error_title": "Negalima prisijungti",
+    "forgot_password_dialog": {
+      "title": "Slaptažodžio nustatymas iš naujo",
+      "description": "Norėdami iš naujo nustatyti slaptažodį, įveskite savo el. pašto adresą",
+      "ok_button": "Nustatyti iš naujo",
+      "cancel_button": "Atšaukti"
+    },
+    "reset_password_confirmation_dialog": {
+      "title": "Slaptažodžio nustatymo iš naujo el. laiškas išsiųstas",
+      "description": "Patikrinkite, ar gautuosiuose nėra slaptažodžio nustatymo iš naujo el. laiško, ir vadovaukitės el. laiške pateiktomis instrukcijomis"
+    }
+  },
+  "strength_form":{
+    "strength_test":"Stiprumo testas",
+    "date_of_sampling":"Mėginių paėmimo laikas",
+    "sampling_by":"Mėginį paėmė",
+    "tested_by":"Atliko",
+    "test_time":"Bandymo laikas",
+    "strength":"Stipris",
+    "density":"Tankis",
+    "1_day": "1 dieną",
+    "7_day": "7 dieną",
+    "14_day": "14 dieną",
+    "28_day": "28 dieną"
+  },
+  "slump_form":{
+    "slump_test": "Slankumo testas",
+    "time":"Laikas",
+    "slump":"Slankumas, mm:",
+    "temperature":"Temperatūra, C",
+    "air":"Oras, %",
+    "tested_by":"Atliko"
+  },
+  "freeze_form":{
+    "freeze_test":"Šalčio testas",
+    "test_time":"Bandymo laikas",
+    "number_of_cycles":"Ciklų skaičius",
+    "tested_by":"Atliko",
+    "mass_before":"Masė prieš",
+    "mass_after":"Masė po",
+    "percentage":"%"
+  },
+  "filter_form":{
+    "filter":"Filtras",
+    "all":"Visi",
+    "period":"Laikotarpis",
+    "this_month":"Šį mėnesį",
+    "last_month":"Praeitą mėnesį",
+    "waybill_number":"Važtaraščio numeris",
+    "waybill_placeholder":"Įveskite važtaraščio numerį",
+    "client": "Klientas",
+    "client_placeholder":"Įveskite klientą ",
+    "clear":"Išvalyti"
+  },
+  "orders":{
+    "empty":"Užsakymų nerasta!"
+  }
+}

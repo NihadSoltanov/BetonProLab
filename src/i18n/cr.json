@@ -1,0 +1,94 @@
+{
+    "ORDER_HISTORY": "Povijest narudžbi",
+    "ORDER_TRACKING":"Praćenje narudžbe",
+    "plants":"Betonare",
+    "slump":"Konzistencija",
+    "site":"Mjesto",
+    "graph":"Grafikon",
+    "order": "narudžba",
+    "strength":"Čvrstoća",
+    "freeze":"Smrzavanje",
+    "comments":"Komentari",
+    "update":"Ažuriraj",
+    "loading": "Učitavanje...",
+    "invoice":"Račun",
+    "time":"Vrijeme",
+    "date":"Datum",
+    "amount":"Iznos",
+    "ongoing_orders":"Trenutne narudžbe",
+    "license_plate":"Licenca",
+    "product":"Proizvod",
+    "plant":"Betonara",
+    "interval":"Interval",
+    "app": {
+      "name": "Lab App",
+      "description": ""
+    },
+    "sign_in": {
+      "welcome_back":"Dobrodošli natrag",
+      "please_login": "Molimo prijavite se",
+      "sign_out": "Odjava",
+      "email": "Email",
+      "password": "Lozinka",
+      "login":"Prijava",
+      "select_region": "Odaberite regiju",
+      "select_language":"Odaberite jezik",
+      "forgot_password":"Zaboravljena lozinka?",
+      "dialog_error_title": "Nije moguće prijaviti se ",
+      "forgot_password_dialog": {
+        "title": "Ponovna postavka lozinke",
+        "description": "Molimo unesite svoju email adresu za ponovnu postavku lozinke.",
+        "ok_button": "Ponovno postavi",
+        "cancel_button": "Otkaži"
+      },
+      "reset_password_confirmation_dialog": {
+        "title": "Email za ponovnu postavku lozinke poslan",
+        "description": "Molimo provjerite svoj inbox za email za ponovnu postavku lozinke i slijedite upute u emailu."
+      }
+    },
+    "strength_form":{
+      "strength_test":"Test čvrstoće",
+      "date_of_sampling":"Datum uzorkovanja",
+      "sampling_by":"Uzorkovao",
+      "tested_by":"Testirao",
+      "test_time":"Vrijeme testiranja",
+      "strength":"Čvrstoća",
+      "density":"Gustoća",
+      "1_day": "1 dan ",
+      "7_day": "7 dana",
+      "14_day": "14 dana",
+      "28_day": "28 dana"
+    },
+    "slump_form":{
+      "slump_test": "Test konzistencije",
+      "time":"Vrijeme",
+      "slump":"Konzistencija, mm:",
+      "temperature":"Temperatura, C",
+      "air":"Zrak, %  ",
+      "tested_by":"Testirao"
+    },
+    "freeze_form":{
+      "freeze_test":"Test smrzavanja",
+      "test_time":"Vrijeme testiranja",
+      "number_of_cycles":"Broj ciklusa",
+      "tested_by":"Testirao",
+      "mass_before":"Masa prije",
+      "mass_after":"Masa poslije",
+      "percentage":"%"
+    },
+    "filter_form":{
+      "filter":"Filtriraj",
+      "all":"Sve",
+      "period":"Razdoblje",
+      "this_month":"Ovaj mjesec",
+      "last_month":"Prošli mjesec",
+      "waybill_number":"Broj otpremnice",
+      "waybill_placeholder":"Unesite broj otpremnice ovdje",
+      "client": "Klijent",
+      "client_placeholder":"Unesite klijenta ovdje",
+      "clear":"Očisti"
+    },
+    "orders":{
+      "empty":"Nema pronađenih narudžbi!"
+    }
+  }
