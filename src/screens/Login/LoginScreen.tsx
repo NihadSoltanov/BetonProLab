@@ -41,8 +41,6 @@ const data = [
 
 const regionData = [
     { label: 'Lithuania', value: 'Lithuania' },
-    { label: 'Latvia', value: 'Latvia' },
-    { label: 'Croatia', value: 'Croatia' },
 ];
 
 export const LoginScreen = () => {
@@ -113,7 +111,6 @@ export const LoginScreen = () => {
                                                     onBlur={onBlur}
                                                     onChangeText={onChange}
                                                     value={value}
-                                                    placeholder="Email"
                                                     textContentType="emailAddress"
                                                     keyboardType="email-address"
                                                     autoCapitalize="none"

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "EcoCrete Laboratory",
-    "slug": "EcoCrete",
+    "name": "BetonPro Laboratory",
+    "slug": "BetonPro",
     "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "lt.heidelbergmeterials.ecolab",
+      "bundleIdentifier": "eu.tinysolutions.betonprolab",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -26,7 +26,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "lt.heidelbergmeterials.ecolab"
+      "package": "eu.tinysolutions.betonprolab"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -62,7 +62,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "3d8ccb02-316c-4cee-8eec-bd0c24c1c402"
+        "projectId": "90fd4973-c688-4b7f-9970-a2dd858b8b8c"
       }
     }
   }

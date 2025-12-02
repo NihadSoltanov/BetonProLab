@@ -1,4 +1,4 @@
-package lt.heidelbergmeterials.ecolab
+package eu.tinysolutions.betonprolab
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

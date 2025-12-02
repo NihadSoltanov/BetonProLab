@@ -81,14 +81,14 @@ def enableProguardInReleaseBuilds = (findProperty('android.enableProguardInRelea
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
-    ndkVersion rootProject.ext.ndkVersion
+    ndkVersion '29.0.14206865'
 
     buildToolsVersion rootProject.ext.buildToolsVersion
-    compileSdk rootProject.ext.compileSdkVersion
+    compileSdk 35
 
-    namespace 'lt.heidelbergmeterials.ecolab'
+    namespace 'eu.tinysolutions.betonprolab'
     defaultConfig {
-        applicationId 'lt.heidelbergmeterials.ecolab'
+        applicationId 'eu.tinysolutions.betonprolab'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -173,4 +173,9 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+}
+configurations.all {
+    exclude group: "com.android.support", module: "support-compat"
+    exclude group: "com.android.support", module: "versionedparcelable"
+    exclude group: "com.android.support"
 }
