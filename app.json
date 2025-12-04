@@ -58,8 +58,17 @@
         }
       ],
       "expo-asset",
-      "expo-font"
+      "expo-font",
+
+      /* --- IMPORTANT FIX FOR iOS BUILD --- */
+      [
+        "expo-dev-launcher",
+        {
+          "enabled": false
+        }
+      ]
     ],
+
     "extra": {
       "eas": {
         "projectId": "90fd4973-c688-4b7f-9970-a2dd858b8b8c"
