@@ -24,6 +24,40 @@
     "name": "Lab App",
     "description": ""
   },
+  "register": {
+    "title": "Register",
+    "subtitle": "Create your account",
+    "select_region": "Select region",
+    "select_language": "Select language",
+    "name": "Name",
+    "success_title": "Registration Successful",
+    "success_message": "Successfully registered. We will activate your account within 24 hours.",
+    "success_button": "OK",
+
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "repeat_password": "Repeat Password",
+    "address": "Address",
+    "tax_code": "Tax Code",
+    "company_account": "Company account",
+    "company_name": "Company Name",
+    "company_code": "Company Code",
+    "register": "Register",
+    "login": "Login",
+    "errors": {
+      "name_required": "Name is required",
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email format",
+      "phone_required": "Phone is required",
+      "phone_invalid": "Phone must start with + and contain only numbers",
+      "password_required": "Password is required",
+      "password_invalid": "Min 8 chars, 1 uppercase letter and 1 number required",
+      "repeat_password_required": "Repeat password is required",
+      "passwords_not_match": "Passwords do not match"
+    }
+  },
+
   "sign_in": {
     "welcome_back":" Welcome Back",
     "please_login": "Please login",
@@ -33,6 +67,7 @@
     "select_region": "Select Region",
     "select_language":"Select Language",
     "login":"Login",
+    "register": "Register",
     "forgot_password":"Forgot password?",
     "dialog_error_title": "Could Not Sign In",
     "forgot_password_dialog": {

@@ -51,9 +51,12 @@ export const HomeScreen = () => {
 
         if (result) {
             setSelectedPlantId(result);
-        } else {
-            setSelectedPlantId('1');
+        } else if (data?.plant?.length) {
+            const firstPlantId = data.plant[0].id.toString();
+            setSelectedPlantId(firstPlantId);
+            await saveString('plantId', firstPlantId);
         }
+
         const index = await loadString('selectedIndex');
         if (index) {
             setSelectedIndex(parseInt(index));
@@ -86,7 +89,11 @@ export const HomeScreen = () => {
                     <ScrollView horizontal={true} style={{ marginBottom: 30 }}>
                         {isLoading && <ActivityIndicator size="large" />}
                         {isSuccess &&
-                            data?.plant?.map((e, i) => {
+                            data?.plant
+                              ?.filter(p => p?.id && p?.name)
+                              .map((e, i) => {
+
+                                console.log("✅ PLANT FROM API:", e);
                                 return (
                                     <ButtonGroup
                                         key={e.id}

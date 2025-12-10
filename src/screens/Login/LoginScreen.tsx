@@ -48,6 +48,7 @@ export const LoginScreen = () => {
     const [languageFocus, setLanguageFocus] = useState<boolean>(false);
     const [regionFocus, setRegionFocus] = useState<boolean>(false);
     const auth = useAuth();
+    const navigation = useNavigation(); // 👉 BUNU EKLE
 
     const {
         control,
@@ -61,14 +62,19 @@ export const LoginScreen = () => {
             plant: '',
         },
     });
-    const onSubmit: SubmitHandler<FieldValues> = async attrs => {
-        const url = await loadString('base_url');
-        await auth.signIn({
-            username: attrs.email,
-            password: attrs.password,
-            base_url: url
-        });
-    };
+  const onSubmit: SubmitHandler<FieldValues> = async attrs => {
+      const url = await loadString('base_url');
+
+      console.log('✅ LOGIN SUBMIT VALUES:', attrs);
+      console.log('✅ base_url BEFORE LOGIN:', url);
+
+      await auth.signIn({
+          username: attrs.email,
+          password: attrs.password,
+          base_url: url
+      });
+  };
+
 
     const onHandleLanguage = async (lang: string) => {
         setLanguageFocus(false);
@@ -180,11 +186,18 @@ export const LoginScreen = () => {
                                             value={value}
                                             labelField="label"
                                             valueField="value"
-                                            onChange={async (item) => {
-                                                setValue('plant', item.value);
-                                                setRegionFocus(false);
-                                                await saveString('base_url', item.value);
-                                            }}
+                                      onChange={async (item) => {
+                                          console.log('✅ SELECTED REGION OBJECT:', item);
+
+                                          setValue('plant', item.value);
+                                          setRegionFocus(false);
+
+                                          await saveString('base_url', item.value);
+
+                                          const savedUrl = await loadString('base_url');
+                                          console.log('✅ SAVED base_url:', savedUrl);
+                                      }}
+
                                             iconColor={COLORS.darkGreen}
                                             onFocus={() => setRegionFocus(true)}
                                             onBlur={() => setRegionFocus(false)}
@@ -234,15 +247,28 @@ export const LoginScreen = () => {
                                 />
                             </View>
 
-                            <View style={styles.btnWrapper}>
-                                <LAButton
-                                    onPress={handleSubmit(onSubmit)}
-                                    fontColor={COLORS.darkGreen}
-                                    buttonColor={COLORS.lightGreen}
-                                    title={t('sign_in.login')}
-                                    titleSize={FONT_SIZES.small}
-                                />
-                            </View>
+                          <View style={styles.btnWrapper}>
+                              <View style={styles.btnHalf}>
+                                  <LAButton
+                                      onPress={handleSubmit(onSubmit)}
+                                      fontColor={COLORS.darkGreen}
+                                      buttonColor={COLORS.lightGreen}
+                                      title={t('sign_in.login')}
+                                      titleSize={FONT_SIZES.small}
+                                  />
+                              </View>
+
+                              <View style={styles.btnHalf}>
+                                  <LAButton
+                                      onPress={() => navigation.navigate('Register' as never)} // 👉 şimdilik sadece ekran adı
+                                      fontColor={COLORS.darkGreen}
+                                      buttonColor={COLORS.lightGreen}
+                                      title={t('sign_in.register')}              // istersen sonra t('sign_in.register') yaparız
+                                      titleSize={FONT_SIZES.small}
+                                  />
+                              </View>
+                          </View>
+
                         </View>
                     </View>
                 </ImageBackground>

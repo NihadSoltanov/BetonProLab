@@ -24,6 +24,40 @@
     "name": "Lab App",
     "description": ""
   },
+  "register": {
+    "title": "Registreerimine",
+    "subtitle": "Loo konto",
+    "select_region": "Vali piirkond",
+    "select_language": "Vali keel",
+    "name": "Nimi",
+    "email": "E-post",
+    "phone": "Telefon",
+    "password": "Parool",
+    "success_title": "Registreerimine õnnestus",
+    "success_message": "Registreerimine õnnestus. Teie konto aktiveeritakse 24 tunni jooksul.",
+    "success_button": "OK",
+
+    "repeat_password": "Korda parooli",
+    "address": "Aadress",
+    "tax_code": "Maksukood",
+    "company_account": "Ettevõtte konto",
+    "company_name": "Ettevõtte nimi",
+    "company_code": "Ettevõtte kood",
+    "register": "Registreeru",
+    "login": "Logi sisse",
+    "errors": {
+      "name_required": "Nimi on kohustuslik",
+      "email_required": "E-post on kohustuslik",
+      "email_invalid": "Vigane e-posti vorming",
+      "phone_required": "Telefon on kohustuslik",
+      "phone_invalid": "Telefon peab algama + ja sisaldama ainult numbreid",
+      "password_required": "Parool on kohustuslik",
+      "password_invalid": "Vähemalt 8 märki, 1 suur täht ja 1 number",
+      "repeat_password_required": "Korda parooli",
+      "passwords_not_match": "Paroolid ei ühti"
+    }
+  },
+
   "sign_in": {
     "welcome_back":" Tere tulemast tagasi",
     "please_login": "Palun logige sisse",
@@ -33,6 +67,7 @@
     "select_region": "Valige piirkond",
     "select_language":"Vali keel",
     "login":"Logi sisse",
+    "register": "Registreerimine",
     "forgot_password":"Unustasid parooli?",
     "dialog_error_title": "Ei saanud sisse logidav",
     "forgot_password_dialog": {

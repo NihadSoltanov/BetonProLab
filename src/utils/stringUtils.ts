@@ -29,7 +29,7 @@ export const truncateText = (input: string,oldSize:number,newSize:number) => {
      if(selectRegion==="Latvia"){
     return WAYBILL_URL_LV;
      }
-     else if(selectRegion==="Lituania"){
+     else if(selectRegion==="Lithuania"){
       return WAYBILL_URL_LT;
      }
      else if(selectRegion==="Croatia"){

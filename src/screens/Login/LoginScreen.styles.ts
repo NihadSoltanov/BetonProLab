@@ -62,13 +62,18 @@ const styles = StyleSheet.create({
         marginTop:0,
     },
     btnWrapper: {
-        padding: 10,
-        paddingTop: 10,
-        paddingBottom: 55,
-        width: '50%',
-        marginTop: 30, // Add marginTop here
-        justifyContent: 'center',
+         padding: 10,
+           paddingTop: 10,
+           paddingBottom: 55,
+           width: '100%',
+           marginTop: 30,
+           justifyContent: 'space-between',
+           flexDirection: 'row',
     },
+btnHalf: {
+    width: '48%',               // 👉 iki buton %48 + boşluk
+},
+
     inputLabel: {
         fontSize: 16,
         marginTop: 30, // Increase this value to add more space between the inputs and the top of the box

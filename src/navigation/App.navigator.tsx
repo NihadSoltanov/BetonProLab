@@ -10,38 +10,48 @@ import { OrderHistoryScreen } from 'src/screens/OrderHistory';
 import { loadString } from 'src/utils/appStorage';
 import { useAuth } from 'src/contexts/Auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { RegisterScreen } from 'src/screens/RegisterScreen/RegisterScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 export const AppNavigator = () => {
     const { authData, loading } = useAuth();
 
-    return (
-        <Stack.Navigator>
-            {authData? (
-                <>
-                    <Stack.Screen
-                        name={ROUTES.Home}
-                        component={HomeScreen}
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name={ROUTES.OngoingOrder}
-                        component={OngoingOrderScreen}
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name={ROUTES.OrderHistory}
-                        component={OrderHistoryScreen}
-                        options={{ headerShown: false }}
-                    />
-                </>
-            ) : (
+return (
+    <Stack.Navigator>
+        {authData ? (
+            <>
+                <Stack.Screen
+                    name={ROUTES.Home}
+                    component={HomeScreen}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name={ROUTES.OngoingOrder}
+                    component={OngoingOrderScreen}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name={ROUTES.OrderHistory}
+                    component={OrderHistoryScreen}
+                    options={{ headerShown: false }}
+                />
+            </>
+        ) : (
+            <>
                 <Stack.Screen
                     name={ROUTES.Login}
                     component={LoginScreen}
                     options={{ headerShown: false }}
                 />
-            )}
-        </Stack.Navigator>
-    );
+
+                <Stack.Screen
+                    name={ROUTES.Register}
+                    component={RegisterScreen}
+                    options={{ headerShown: false }}
+                />
+            </>
+        )}
+    </Stack.Navigator>
+);
+
 };

@@ -24,6 +24,40 @@
     "name": "Lab App",
     "description": ""
   },
+  "register": {
+    "title": "Регистрация",
+    "subtitle": "Создайте аккаунт",
+    "select_region": "Выберите регион",
+    "select_language": "Выберите язык",
+    "name": "Имя",
+    "email": "Эл. почта",
+    "phone": "Телефон",
+    "success_title": "Регистрация прошла успешно",
+    "success_message": "Регистрация выполнена успешно. Ваш аккаунт будет активирован в течение 24 часов.",
+    "success_button": "ОК",
+
+    "password": "Пароль",
+    "repeat_password": "Повторите пароль",
+    "address": "Адрес",
+    "tax_code": "Налоговый код",
+    "company_account": "Корпоративный аккаунт",
+    "company_name": "Название компании",
+    "company_code": "Код компании",
+    "register": "Зарегистрироваться",
+    "login": "Войти",
+    "errors": {
+      "name_required": "Имя обязательно",
+      "email_required": "Эл. почта обязательна",
+      "email_invalid": "Неверный формат эл. почты",
+      "phone_required": "Телефон обязателен",
+      "phone_invalid": "Телефон должен начинаться с + и содержать только цифры",
+      "password_required": "Пароль обязателен",
+      "password_invalid": "Минимум 8 символов, 1 заглавная буква и 1 цифра",
+      "repeat_password_required": "Повторите пароль",
+      "passwords_not_match": "Пароли не совпадают"
+    }
+  },
+
   "sign_in": {
     "welcome_back":"Добро пожаловать",
     "please_login": "Пожалуйста, войдите",
@@ -33,6 +67,7 @@
     "select_region": "Выберите регион",
     "select_language":"Выберите язык",
     "login":"Авторизоваться",
+    "register": "Регистрация",
     "forgot_password":"Забыли пароль?",
     "dialog_error_title": "Не удалось войти?",
     "forgot_password_dialog": {
