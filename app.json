@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "BetonPro Laboratory",
+    "newArchEnabled": true,
     "slug": "BetonPro",
     "version": "2.0.0",
     "orientation": "portrait",
@@ -59,7 +60,7 @@
       ],
       "expo-asset",
       "expo-font",
-      "expo-web-browser"
+      "@react-native-community/datetimepicker"
     ],
     "extra": {
       "eas": {
