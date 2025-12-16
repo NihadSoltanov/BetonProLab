@@ -5,23 +5,48 @@ import { remove } from "src/utils/appStorage";
 import { saveString } from "src/utils/appStorage";
 
 
-const login = async (data: LoginDto) =>{
- await saveString('base_url', data.base_url || '');
- const response= await axios.get('login',{params:{user:data.username,
-  psw:data.password}});
-  const { success} = response.data;
+const deactivateAccount = async (userId: number) => {
+  const response = await axios.get('deactivateUser', {
+    params: { user_id: userId },
+  });
 
-  if(success === false)
-  {
+  if (!response.data.success) {
+    throw new Error('Deactivate failed');
+  }
+
+  return true;
+};
+
+const login = async (data: LoginDto) => {
+  await saveString('base_url', data.base_url || '');
+
+  const response = await axios.get('login', {
+    params: {
+      user: data.username,
+      psw: data.password,
+    },
+  });
+
+
+  const {
+    success,
+    user_id,
+    username,
+    access_token,
+    expire_time,
+  } = response.data;
+
+  if (!success) {
     return undefined;
   }
 
-    const cookies=response.headers['set-cookie']!;
-      const data1=cookies[0].split(';')[0];
-      const auth_token=data1.substring(11,data1.length);
-      const data2=cookies[0].split(';')[1];
-      const expired=data2.substring(9,data2.length);
-   return {auth_token:auth_token,expired:expired,user:data.username};
+  return {
+    auth_token: access_token,
+    expired: expire_time,
+    user: username,
+    user_id: Number(user_id),
+  };
 };
 
-  export {login};
+
+  export {login, deactivateAccount };

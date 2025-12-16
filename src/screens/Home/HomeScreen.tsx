@@ -7,6 +7,7 @@ import {
     ScrollView,
     Text,
     View,
+    Alert
 } from 'react-native';
 import { LAButton } from 'src/components/Button/LAButton';
 import { LAMenuButton } from 'src/components/Button/LAMenuButton';
@@ -34,7 +35,8 @@ export const HomeScreen = () => {
     const navigation = useNavigation<any>();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedPlantId, setSelectedPlantId] = useState('');
-    const { signOut } = useAuth();
+    const { signOut, deleteAccount } = useAuth();
+
     const { data, isSuccess, isLoading } = usePlants();
     const orderCounts = useOrdersCount(selectedPlantId);
     const filter = useContext(FilterContext);
@@ -186,17 +188,57 @@ export const HomeScreen = () => {
                     )}
 
                 </View>
-                <View style={loginStyles.btnWrapper}>
-                    <LAButton
-                        onPress={async () => {
-                            await signOut(); 
-                        }}
-                        fontColor={COLORS.darkGreen}
-                        buttonColor={COLORS.lightGreen}
-                        title={t('sign_in.sign_out')}
-                        titleSize={FONT_SIZES.small}
-                     />
-                    </View>
+<View style={loginStyles.btnWrapper}>
+
+  {/* LOGOUT */}
+  <LAButton
+    onPress={async () => {
+      await signOut();
+    }}
+    fontColor={COLORS.darkGreen}
+    buttonColor={COLORS.lightGreen}
+    title={t('sign_in.sign_out')}
+    titleSize={FONT_SIZES.small}
+  />
+
+ <View style={{ marginTop: 12 }}>
+   <LAButton
+     onPress={() => {
+       Alert.alert(
+         t('sign_in.delete_account_title'),
+         t('sign_in.delete_account_message'),
+         [
+           { text: t('sign_in.cancel'), style: 'cancel' },
+           {
+             text: t('sign_in.delete'),
+             style: 'destructive',
+             onPress: async () => {
+               await deleteAccount();
+             },
+           },
+         ],
+       );
+     }}
+     title={t('sign_in.delete_account')}
+     titleSize={FONT_SIZES.small}
+
+     buttonColor="#FFFFFF"
+
+     style={{
+       borderWidth: 1,
+       borderColor: '#E53935',
+       backgroundColor: '#E53935',
+     }}
+
+     titleStyle={{
+       color: '#ffffff',
+       fontWeight: '600',
+     }}
+   />
+ </View>
+
+</View>
+
             </ImageBackground>
         </SafeAreaView>
     );

@@ -4,6 +4,7 @@ import { login } from "src/data/querys/authQuery";
 import { AuthContextData, AuthData } from "src/domain/models/AuthContextData";
 import { LoginDto } from "src/domain/models/LoginDto";
 import { loadString, remove, saveString, clear } from "src/utils/appStorage";
+import { deactivateAccount } from 'src/data/querys/authQuery';
 
 
 
@@ -18,25 +19,46 @@ import { loadString, remove, saveString, clear } from "src/utils/appStorage";
         loadStorageData();
       }, [userdata]);
     
-      async function loadStorageData(): Promise<void> {
-        try {
-          const user= await loadString("user");
-          if(user){
-            setUserdata(user);
-            const _authData: AuthData = {auth_token:"",expired:"",user:user};
-            setAuthData(_authData);
-          }
-          else{
-            const _authData: AuthData = {auth_token:"",expired:"",user:""};
-            setAuthData(undefined);
-          }
-        } catch (error) {
-        } finally {
-          //loading finished
-          setLoading(false);
+    async function loadStorageData(): Promise<void> {
+      try {
+        const user = await loadString("user");
+        const user_id = await loadString("user_id");
+        const token = await loadString("token");
+        const expired = await loadString("expired_time");
+
+        if (user && user_id && token) {
+          const _authData: AuthData = {
+            auth_token: token,
+            expired: expired ?? "",
+            user: user,
+            user_id: Number(user_id),
+          };
+
+          setAuthData(_authData);
+        } else {
+          setAuthData(undefined);
         }
+      } catch (error) {
+        setAuthData(undefined);
+      } finally {
+        setLoading(false);
       }
-    
+    }
+
+    const deleteAccount = async () => {
+      if (!authData?.user_id) {
+        Alert.alert('User not found');
+        return;
+      }
+
+      try {
+        await deactivateAccount(authData.user_id);
+        await signOut(); // 🔥 backend success → logout
+      } catch (e) {
+        Alert.alert('Delete account failed');
+      }
+    };
+
       const signIn = async (data:LoginDto) => {
         await remove("token");
         await clear();
@@ -64,7 +86,7 @@ import { loadString, remove, saveString, clear } from "src/utils/appStorage";
       };
     
       return (
-        <AuthContext.Provider value={{authData, loading, signIn, signOut}}>
+        <AuthContext.Provider value={{authData, loading, signIn, signOut,deleteAccount,}}>
           {children}
         </AuthContext.Provider>
       );
