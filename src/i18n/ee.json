@@ -66,8 +66,7 @@
     "delete_account_title": "Konto kustutamine",
     "delete_account_message": "Kas oled kindel? Seda toimingut ei saa tagasi võtta.",
     "cancel": "Tühista",
-    "delete": "Kustuta"
-  },
+    "delete": "Kustuta",
     "email": "Meil",
     "password": "Parool",
     "select_region": "Valige piirkond",
