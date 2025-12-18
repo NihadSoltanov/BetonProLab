@@ -10,31 +10,26 @@ import ee from './ee.json';
 import cr from './cr.json';
 
 i18n.use(initReactI18next).init({
-    compatibilityJSON: 'v3',
-    fallbackLng: 'en',
-    lng: '"en-US',
-    debug: false,
-    resources: {
-        en: {
-            translation: en,
-        },
-        lt: {
-            translation: lt,
-        },
-        lv: {
-            translation: lv,
-        },
-        ru: {
-            translation: ru,
-        },
-        ee: {
-            translation: ee,
-        },
-        cr: {
-            translation: cr,
-        },
-    },
+  compatibilityJSON: 'v3',
+  fallbackLng: 'en',
+  lng: 'en',
+  debug: false,
+
+  react: {
+    useSuspense: false, // 🔴 BU SATIR ŞART
+  },
+
+  resources: {
+    en: { translation: en },
+    lt: { translation: lt },
+    lv: { translation: lv },
+    ru: { translation: ru },
+    ee: { translation: ee },
+    cr: { translation: cr },
+  },
 });
+
+
 
 // export directly and use i18n.t to translate functionally
 export { i18n };

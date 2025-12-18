@@ -47,6 +47,8 @@ export const LoginScreen = () => {
     const { t, i18n } = useTranslate();
     const [languageFocus, setLanguageFocus] = useState<boolean>(false);
     const [regionFocus, setRegionFocus] = useState<boolean>(false);
+    const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+
     const auth = useAuth();
     const navigation = useNavigation(); // 👉 BUNU EKLE
 
@@ -76,11 +78,19 @@ export const LoginScreen = () => {
   };
 
 
-    const onHandleLanguage = async (lang: string) => {
-        setLanguageFocus(false);
-        i18n.changeLanguage(lang);
-        await saveString('language', lang);
-    };
+   const onHandleLanguage = async (lang: string) => {
+       console.log('🌍 LOGIN language selected:', lang);
+
+       setSelectedLanguage(lang);      // ✅ STATE’E YAZ
+       setLanguageFocus(false);
+
+       await i18n.changeLanguage(lang); // ✅ i18n
+       await saveString('language', lang); // ✅ AsyncStorage
+
+       const saved = await loadString('language');
+       console.log('📦 LOGIN saved language:', saved);
+   };
+
 
     return (
         <SafeAreaView style={styles.container}>
@@ -230,7 +240,8 @@ export const LoginScreen = () => {
                                         styles.dropDownInputSearchStyle
                                     }
                                     data={data}
-                                    value={null}
+                                    value={selectedLanguage}
+
                                     labelField="label"
                                     valueField="value"
                                     onChange={ (item) =>

@@ -32,6 +32,7 @@ import { useAuth } from 'src/contexts/Auth';
 
 export const HomeScreen = () => {
     const { t, i18n } = useTranslate();
+
     const navigation = useNavigation<any>();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedPlantId, setSelectedPlantId] = useState('');
@@ -45,11 +46,9 @@ export const HomeScreen = () => {
         const result = await loadString('plantId');
         const language = await loadString('language');
 
-        if (language) {
-            i18n.changeLanguage(language);
-        } else {
-            i18n.changeLanguage('en');
-        }
+        if (language && i18n.language !== language) {
+                await i18n.changeLanguage(language);
+            }
 
         if (result) {
             setSelectedPlantId(result);
